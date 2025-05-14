@@ -11,3 +11,11 @@ export default function Home() {
     </Container>
   );
 }
+
+// Bootstrap: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+// Next.js: https://nextjs.org/docs
+
+// React HOOKS: https://react.dev/reference/react/hooks
+
+// React-Bootstrap: https://react-bootstrap.netlify.app/

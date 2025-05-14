@@ -7,14 +7,19 @@ export default function UseState() {
         <Container className="text-center" >
             <h1>UseState</h1>
             <p>{count}</p>
-            <button onClick={() => {
-                setCount(addCount(count));
+            <button onClick={async() => {
+                setCount(await addCount(count));
+                console.log(count);
             }}> Add Count </button>
         </Container>
     </>
 }
+
 function addCount(count) {
-    setTimeout(() => {
-        return count + 1;
-    }, 1000);
+    count++;
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(count);
+        }, 1000);
+    });
 }

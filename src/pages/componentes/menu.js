@@ -13,9 +13,9 @@ export default function Menu() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/esportes">Esportes</Nav.Link>
-            <Nav.Link href="/usestate">UseState</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown title="ReactHook's" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/usestate">UseState</NavDropdown.Item>
+              <NavDropdown.Item href="useeffect">UseEffect</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
