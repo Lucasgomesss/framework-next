@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 export default function Menu() {
   return (
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar bg="dark" data-bs-theme="dark" expand="lg">
       <Container>
         <Navbar.Brand href="/">Info A</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -13,9 +13,9 @@ export default function Menu() {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/esportes">Esportes</Nav.Link>
-            <NavDropdown title="ReactHook's" id="basic-nav-dropdown">
+            <NavDropdown title="ReactHook´s" id="basic-nav-dropdown">
               <NavDropdown.Item href="/usestate">UseState</NavDropdown.Item>
-              <NavDropdown.Item href="useeffect">UseEffect</NavDropdown.Item>
+              <NavDropdown.Item href="/useeffect">UseEffect</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -25,13 +25,19 @@ export default function Menu() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Notícias" id="noticias">
+            <NavDropdown title="Noticias" id="noticias">
               <NavDropdown.Item href="/cadastro/noticia">Cadastro Notícia</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Função Next" id="funcaonext">
+            <NavDropdown title="FuncaoNext" id="funcaonext">
               <NavDropdown.Item href="/funcaonext/gssp">GetServerSideProps</NavDropdown.Item>
               <NavDropdown.Item href="/funcaonext/gssp2">GetServerSideProps-2</NavDropdown.Item>
               <NavDropdown.Item href="/funcaonext/gsspcard">GetServerSideProps-Card</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardpesquisa">GSSP-Card-Pesquisa</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardesportes">GSSP-Card-Esportes</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardentretenimento">GSSP-Card-Entretenimento</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardciencia">GSSP-Card-Ciência</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardeducacao">GSSP-Card-Educação</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcardcultura">GSSP-Card-Cultura</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

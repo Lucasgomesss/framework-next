@@ -8,8 +8,8 @@ export async function getServerSideProps() {
                 { "var1": "Info A", "var2": "FW1", "nome": "IFMS" }
         }
     }
-} 
-export default function Gsspcard({ repo }) {
+}
+export default function Gsspcardentretenimento({ repo }) {
     return (
         <>
             <Container className="text-center">
@@ -23,11 +23,12 @@ export default function Gsspcard({ repo }) {
                 <Row xs={1} md={2} lg={3} className="g-4">
                     {Array.isArray(noticias) ?
                         noticias.map(noticia =>
+                        (noticia.tiponoticia === "entretenimento" ?
                             <Cards idnoticia={noticia.idnoticia}
                                 titulonoticia={noticia.titulonoticia}
                                 tiponoticia={noticia.tiponoticia}
                                 conteudonoticia={noticia.conteudonoticia}
-                                datahoracadastro={noticia.datahoracadastro} />
+                                datahoracadastro={noticia.datahoracadastro} /> : null)
                         )
                         : "não"}
                 </Row>
