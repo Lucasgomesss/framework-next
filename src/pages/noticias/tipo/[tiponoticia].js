@@ -1,13 +1,13 @@
 import { Container, Row } from 'react-bootstrap';
-import Cards from './componentes/cards';
-export async function getServerSideProps() {
+import Cards from '../../componentes/cards';
+export async function getServerSideProps(req) {
   // Fetch data from external API
-  const res = await fetch('http://localhost:3000/api/noticias/apinoticias')
+  const res = await fetch('http://localhost:3000/api/noticias/tipo/'+req.query.tiponoticia)
   const repo = await res.json()
   // Pass data to the page via props
   return { props: { noticias: repo } }
 }
-export default function Home({ noticias }) {
+export default function Page({ noticias }) {
   return (
     <Container>
       <Row xs={1} md={2} lg={3} className="g-4 pt-2">
